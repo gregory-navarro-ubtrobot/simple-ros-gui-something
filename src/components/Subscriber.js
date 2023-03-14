@@ -1,4 +1,12 @@
-export default function Subscriber () {
+export default function Subscriber ({messages}) {
 
-    return (<div>SUBSCRIBER</div>)
+
+    return (
+        <div>
+        SUBSCRIBER
+        <ul>
+        { messages.map((message, i) => <li key={i}>{message.data}</li>) }
+        </ul>
+        </div>
+        )
 }

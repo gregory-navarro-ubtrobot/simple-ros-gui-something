@@ -1,15 +1,10 @@
 import React from "react"
 
 
-export default function Publisher () {
+export default function Publisher ({ publishMessage, robotClient }) {
 
-    const [rosStub, setRosStub] = React.useState(null);
-
-    React.useEffect(() => {
-        setRosStub(
-
-        )
-    })
-
-    return (<div>Publisher</div>)
+    return (<div>
+        Publisher
+        <button onClick={() => robotClient.publishMessage()}>Publish</button>
+    </div>)
 }

@@ -390,7 +390,7 @@ export default class RobotClient {
         if (message.data.length > 0) {
 
           dispatch(handleQRCodeResponse(message.data));
-
+          callback
         } else {
 
           dispatch(setQRCodeNotFound(true));
